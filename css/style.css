@@ -1,0 +1,245 @@
+
+/*	Font Import
+------------------------------ */
+
+@font-face {
+    
+    font-family: 'League Spartan';
+    src: url('font/league-spartan/leaguespartan-bold.eot');
+    src: url('font/league-spartan/leaguespartan-bold.eot?#iefix') format('embedded-opentype'),
+         url('font/league-spartan/leaguespartan-bold.woff2') format('woff2'),
+         url('font/league-spartan/leaguespartan-bold.woff') format('woff'),
+         url('font/league-spartan/leaguespartan-bold.ttf') format('truetype'),
+         url('font/league-spartan/leaguespartan-bold.svg#league_spartanbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('font/open-sans/opensans_300.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('font/open-sans/opensans_400.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url('font/open-sans/opensans_400i.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('font/open-sans/opensans_700.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: url('font/open-sans/opensans_800.ttf') format('truetype');
+}
+
+/*	Body
+------------------------------ */
+
+body {
+    font: 1em/1.6 "Open Sans", sans-serif;
+    color: hsl(1, 1%, 97%);
+    margin: 0;
+    background-color: hsl(0, 0%, 17%);
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+/*	Colors
+------------------------------ */
+
+.blue {
+    background-color: hsl(230, 57%, 40%);
+}
+
+.orange {
+    background-color: hsl(40, 87%, 44%);
+}
+
+.green {
+    background-color: hsl(100, 50%, 40%);
+}
+
+.yellow {
+    background-color: hsl(50, 80%, 47%);
+}
+
+.red {
+    background-color: hsl(17, 70%, 44%);
+}
+
+.purple {
+    background-color: hsl(270, 70%, 44%);
+}
+
+.brown {
+    background-color: hsl(35, 30%, 50%);
+}
+
+.grey {
+    background-color: hsl(0, 0%, 54%);
+}
+
+/*	Blox Layout
+------------------------------ */
+
+#blox {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+[class*='bloc'] {
+	display: block;
+    padding: 10px 20px;
+    float: left;
+    width: 20%;
+    height: 140px;
+}
+
+[class*='bloc']:hover {
+	cursor: pointer;
+}
+
+[class*='bloc'].max:hover {
+	cursor: default;
+}
+
+[class*='bloc']:after {
+	clear: both;
+}
+
+.content_bloc input {
+    font-family: 'League Spartan', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+    font-size: 220%;
+    width: 100%;
+    text-align: center;
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    resize: none;
+    margin-left: -7px;
+    margin-top: 50px;
+    overflow: hidden;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    cursor: pointer;
+    -webkit-text-fill-color: inherit;
+    -webkit-opacity: 1;
+    opacity: 1; 
+}
+
+.content_bloc textarea {
+    display: none;
+}
+
+.content_bloc span {
+    display: none;
+    height: 0;
+    width: 0;
+}
+
+.content_bloc.max {
+    width: 50%;
+    height: 100%;
+}
+
+.content_bloc.max input {
+    font-size: 400%;
+    text-align: left;
+    vertical-align: top;
+    margin: 30px 20px 10px 20px;
+    width: 77%;
+    overflow: hidden;
+    cursor: text;
+}
+
+.content_bloc.max textarea {
+    font-size: 120%;
+    text-align: left;
+    margin: 20px;
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    resize: none;
+    width: 86%;
+    height: 74%;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.add_bloc {
+    width: 7%;
+    height: 140px;
+    padding-left: 21px;
+    padding-top: 13px;
+    padding-bottom: 7px;
+}
+
+.add_bloc h1 {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 550%;
+    line-height: 140px;
+    text-align: center;
+    margin: 0px;
+}
+
+.alters {
+    font-size: 400%;
+    padding: 0;
+    margin: 0;
+    height: 0;
+    width: 0;
+    display: none;
+}
+
+.alters #drop {
+    position: absolute;
+    top: 20px;
+    left: 48%;
+    line-height: 30px;
+    vertical-align: text-bottom;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.alters #color {
+    position: absolute;
+    top: 100px;
+    left: 47.74%;
+    height: 200px;
+    width: 40px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid hsl(1, 1%, 97%);
+    cursor: pointer;
+}
+
+.alters #color li {
+    cursor: pointer;
+    height: 23px;
+    width: 95%;
+    list-style-type: none;
+    border: 1px solid hsl(1, 1%, 97%);
+}
